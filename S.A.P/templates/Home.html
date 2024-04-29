@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes from Around the World</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        header {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            margin-top: 50px;
+        }
+
+        .list-group-item {
+            border-color: #dee2e6;
+            background-color: #fff;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>Welcome to my blog</h1>
+</header>
+<div class="container">
+    <h1 class="mt-5 mb-4">Recipes from Around the World</h1>
+    <p><a href="{{ url_for('logout') }}">Logout</a></p>
+    <ul class="list-group">
+        {% for recipe in recipes %}
+        <li class="list-group-item">
+            <h4 class="mb-0">{{ recipe[0] }}</h4>
+            <p class="mb-0">{{ recipe[1] }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+<script type='text/javascript'
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="66FA54A0EFFE3E92D747596EE239A95D6BBCD2966561401FC65E4DB013163843D28D49FFE99FE1453B7CFA947A2F8376"
+        async defer></script>
+<script type='text/javascript'
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"
+        integrity="43A13D447BDB2326452687EDFB69896C76845A5765BC8F48398CB99F7CD5F73CD3B66237524B1D41156FA3131FA28028"
+        async defer></script>
+<script type='text/javascript'
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="07882DD63AC60BB261E008133D2754B4E06F7CEF2C86E7F9EC16A086A15F3E5631A1FBCBF3F29411F62224E30C57EAD5"
+        async defer></script>
+</body>
+</html>
